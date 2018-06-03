@@ -19,3 +19,7 @@ RUN apt-get update --fix-missing && \
 # Spark
 RUN curl -s https://archive.apache.org/dist/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz | tar xz -C /tmp && \
     mv /tmp/spark-2.3.0-bin-hadoop2.7 ${SPARK_HOME}
+
+# Google Cloud Storage Connector
+RUN wget -q https://storage.googleapis.com/hadoop-lib/gcs/gcs-connector-latest-hadoop2.jar -P ${SPARK_HOME}/jars
+COPY ./spark-defaults.conf ${SPARK_HOME}/conf

@@ -8,6 +8,7 @@ A Docker image based on Google Cloud Datalab that includes Spark. The image can 
     - pyspark 2.3.0 added
 - OpenJDK 8
 - Spark 2.3.0
+- Google Cloud Storage Connector
 
 ## Datalab on a local machine
 
