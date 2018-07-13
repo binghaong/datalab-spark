@@ -7,12 +7,12 @@ ENV PATH                    ${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${PATH}
 
 # Python Packages
 RUN conda update -n root conda -y --quiet && \
-    conda install -n py3env pyspark=2.3.0 -y --quiet && \
+    conda install -n py3env pyspark=2.3.0 pandas-datareader -y --quiet && \
     conda clean -tipsy
 
-# OpenJDK
+# OpenJDK + other dependencies
 RUN apt-get update --fix-missing && \
-    apt-get install -y openjdk-8-jdk-headless procps && \
+    apt-get install -y openjdk-8-jdk-headless procps fonts-liberation && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
