@@ -5,8 +5,9 @@ A Docker image based on Google Cloud Datalab that includes Spark. The image can 
 ## Contents
 
 - Added libraries (Python):
-    - pyspark
-    - pandas-datareader
+    - pyspark 2.3.1
+    - pandas-datareader 0.6.0
+    - seaborn 0.9.0
 - OpenJDK 8
 - Spark 2.3.1
 - Google Cloud Storage Connector

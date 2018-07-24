@@ -10,6 +10,7 @@ ENV PATH                    ${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${PATH}
 # Python Packages
 RUN conda update -n root conda -y --quiet && \
     conda install -n py3env pyspark=${SPARK_VERSION} pandas-datareader -y --quiet && \
+    conda install -n py3env -c conda-forge seaborn -y --quiet && \
     conda clean -tipsy
 
 # OpenJDK + other dependencies
